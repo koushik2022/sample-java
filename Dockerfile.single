@@ -1,0 +1,9 @@
+FROM fabric8/java-alpine-openjdk8-jre
+
+LABEL maintainer <pkar@gmail.com>
+
+WORKDIR /usr/local
+
+COPY target/docker1.jar /usr/local
+
+ENTRYPOINT ["java","-jar","docker1.jar"]
