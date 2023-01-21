@@ -3,12 +3,12 @@ pipeline{
   stages{
     stage("build"){
       steps{
-        mvn clean
+        sh "mvn clean package"
       }
     }
      stage("test"){
       steps{
-         mvn verify
+        sh "mvn verify"
       }
     }
     stage("push artifactory"){
