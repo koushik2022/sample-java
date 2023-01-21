@@ -3,12 +3,12 @@ pipeline{
   stages{
     stage("build"){
       steps{
-        echo 'building application...'
+        mvn clean package
       }
     }
      stage("test"){
       steps{
-         echo 'testing application...'
+         mvn verify
       }
     }
     stage("push artifactory"){
