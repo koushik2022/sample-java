@@ -11,6 +11,11 @@ pipeline{
          echo 'testing application...'
       }
     }
+    stage("push artifactory"){
+      steps{
+         echo 'push to artifactory application...'
+      }
+    }
      stage("deploy"){
       steps{
          echo 'deploying application...'
